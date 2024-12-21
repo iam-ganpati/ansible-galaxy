@@ -1,0 +1,8 @@
+---
+# tasks file for my_role
+# tasks file for my_role
+  - name: install httpd
+    action: yum pkg=httpd state=present
+    notify:
+      - start httpd
+      - copy index.html
